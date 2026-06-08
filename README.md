@@ -1,6 +1,6 @@
 # Benchmark de predicción en oceanografía
 
-El repo incluye una serie de 20 años de temperatura, salinidad, nutrientes, clorofila, etc. a la que se le aplican enfoques `estado-del-arte` para hacer predicción en oceanografía (métodos estadísticos, machine learning, modelos 1D mecanicistas) y se evalúen sobre los mismos horizontes de predicción.
+Se incluye una serie de 20 años de temperatura, salinidad, nutrientes, clorofila, etc... a la que se le aplican enfoques *estado-del-arte* para hacer predicción en oceanografía (métodos estadísticos, machine learning, modelos 1D mecanicistas) y se evalúen sobre los mismos horizontes de predicción.
 
 Los notebooks están organizados siguiendo un flujo de trabajo real que incluye:
 
@@ -38,6 +38,8 @@ Objetivo: extraer conocimiento ecológico de los resultados
 ```text
 benchmark-prediccion-oceano/
 ├── README.md                    # Este archivo
+├── requirements.txt
+├── environment.yml
 ├── data/
 │   ├── raw/                     # Datos crudos (versionados)
 │   └── processed/               # Datos procesados (no versionados, regenerables)
@@ -66,8 +68,8 @@ benchmark-prediccion-oceano/
 Con `conda`:
 
 ```{bash}
-conda create -n cst python=3.13
-conda activate cst
-pip install -r requirements.txt
-pip install -e .
+conda create -n oceanQast -f environment.yml
+conda activate oceanQast
+! pip install -r requirements.txt
+! pip install -e .
 ```
