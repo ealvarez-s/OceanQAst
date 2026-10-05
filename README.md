@@ -1,6 +1,6 @@
 # Benchmark de predicción en oceanografía
 
-Se incluye una serie de 20 años de temperatura, salinidad, nutrientes, clorofila, etc... a la que se le aplican enfoques *estado-del-arte* para hacer predicción en oceanografía (métodos estadísticos, machine learning, modelos 1D mecanicistas) y se evalúen sobre los mismos horizontes de predicción.
+Se incluye una serie de 20 años de hidrología (temperatura, salinidad, fluorescencia, oxígeno), nutrientes y clorofila, recogida en la estación E2GI (https://www.seriestemporales-ieo.net/), a la que se le aplican enfoques *estado-del-arte* para hacer predicción en oceanografía (métodos estadísticos, machine learning y modelos mecanicistas) y se evalúen sobre los mismos horizontes de predicción.
 
 Los notebooks están organizados siguiendo un flujo de trabajo real que incluye:
 
@@ -29,8 +29,6 @@ Objetivo: caracterizar la confianza en las simulaciones y predicciones.
 ### 8. Evaluación y validación
 Objetivo: medir la calidad de simulaciones y predicciones.
 
-### 9. Diagnóstico e interpretación ecológica
-Objetivo: extraer conocimiento ecológico de los resultados
 
 
 ## Estructura del repositorio
@@ -51,15 +49,14 @@ benchmark-prediccion-oceano/
 │   ├── figures/
 │   └── forecast/
 └── notebooks/
-    ├── 01_data_preparation/                 
-    ├── 02_exploratory_analysis/             
-    ├── 03_statistical_models/                 
-    ├── 04_machine_learning/                 
-    ├── 05_process_based_models/             
-    ├── 06_data_model_combination/                
-    ├── 07_uncertainty_quantification/                
-    ├── 08_validation/            
-    └── 09_ecosystem_interpretation/               
+    ├── 01_data_preparation.ipynb               
+    ├── 02_exploratory_analysis.ipynb            
+    ├── 03_statistical_models.ipynb          
+    ├── 04_machine_learning.ipynb          
+    ├── 05_process_based_models.ipynb            
+    ├── 06_data_model_combination.ipynb             
+    ├── 07_uncertainty_quantification.ipynb               
+    └── 08_validation.ipynb             
 
 ```
 
