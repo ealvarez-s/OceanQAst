@@ -60,13 +60,44 @@ benchmark-prediccion-oceano/
 
 ```
 
-## Setup
+## Instalación
 
-Con `conda`:
+git clone git@github.com:ealvarez-s/OceanQAst.git
 
-```{bash}
-conda create -n oceanQast -f environment.yml
-conda activate oceanQast
-! pip install -r requirements.txt
-! pip install -e .
-```
+cd OceanQAst
+
+conda env create -f environment.yml
+## he comentado la parte instalada con pip, as que no tengo parsac de momento
+
+conda activate oceanqast
+
+## HOMEDIR=$PWD
+
+git clone --recurse-submodules https://github.com/BoldingBruggeman/seamless-notebooks.git
+
+##MY_DIR=$HOMEDIR/seamless-notebooks
+##cd $MY_DIR/extern
+
+cd seamless-notebooks/extern
+
+git clone --recurse-submodules git@github.com:inogs/bfmforfabm.git ogs
+cd ogs
+git checkout neccton
+
+
+##cd $MY_DIR/extern/fabm
+cd ../fabm
+git checkout necton ??
+
+### esta parte no va a ser necesaria si solo compilamos pyfabm
+cd $MY_DIR/extern/gotm
+cd ../gotm
+git checkout 5f950ca05e08
+git pull --recurse-submodules
+git submodule update --init --recursive
+####
+
+##cd $HOMEDIR
+cd ../../../
+
+bash ./my_install
