@@ -61,7 +61,7 @@ OceanQAst/
         └── xxx.py          
 ```
 
-## Instalación
+### Instalación
 
 `git clone git@github.com:ealvarez-s/OceanQAst.git`
 
@@ -81,23 +81,16 @@ OceanQAst/
 ((cd $MY_DIR/extern))
 
 
-### BFM
+
+#### Branches
 
 `cd seamless-notebooks/extern`
 
-`git clone --recurse-submodules git@github.com:inogs/bfmforfabm.git ogs`
-
-`cd ogs`
-
-`git checkout neccton`
-
-
 ((cd $MY_DIR/extern/fabm))
 
-`cd ../fabm`
+`cd fabm`
 
 `git checkout necton ??`
-
 
 ((esta parte no va a ser necesaria si solo compilamos pyfabm))
 
@@ -112,14 +105,28 @@ OceanQAst/
 `git submodule update --init --recursive`
 
 
-### E2GI setup
 
-cd ../../setups/
+#### BFM
+
+`cd ../`
+
+`git clone --recurse-submodules git@github.com:inogs/bfmforfabm.git ogs`
+
+`cd ogs`
+
+`git checkout neccton`
+
+
+
+#### E2GI setup
+
+`cd ../../setups/`
 
 `git clone git@github.com:ealvarez-s/my_E2GI_setup.git` (TO DO)
 
 
-### Compile pyfabm
+
+#### Compile pyfabm
 
 ((cd $HOMEDIR))
 
