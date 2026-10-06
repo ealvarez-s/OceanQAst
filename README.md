@@ -46,8 +46,8 @@ OceanQAst/
 │   ├── 03_statistical_models.ipynb          
 │   ├── 04_machine_learning.ipynb          
 │   ├── 05_process_based_models.ipynb            
-│   ├── 06_data_model_combination.ipynb             
-│   ├── 07_uncertainty_quantification.ipynb               
+│   ├── 06_controlability.ipynb        
+│   ├── 07_data_model_combination.ipynb               
 │   └── 08_validation.ipynb
 ├── results/
 │   ├── figures/
@@ -81,6 +81,8 @@ OceanQAst/
 ((cd $MY_DIR/extern))
 
 
+### BFM
+
 `cd seamless-notebooks/extern`
 
 `git clone --recurse-submodules git@github.com:inogs/bfmforfabm.git ogs`
@@ -110,8 +112,17 @@ OceanQAst/
 `git submodule update --init --recursive`
 
 
+### E2GI setup
+
+cd ../../setups/
+
+`git clone git@github.com:ealvarez-s/my_E2GI_setup.git` (TO DO)
+
+
+### Compile pyfabm
+
 ((cd $HOMEDIR))
 
-`cd ../../../`
+`cd ../../`
 
 `bash ./my_install`

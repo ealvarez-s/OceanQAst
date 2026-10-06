@@ -27,5 +27,5 @@ dependencies:
   - pip:
       - -e ./seamless-notebooks/extern/parsac
       - pyncview
-      - pp
+##      - pp (TO DO: solve)
 ##      - https://www.parallelpython.com/downloads/pp/pp-1.6.4.4.zip
