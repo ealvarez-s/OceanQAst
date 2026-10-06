@@ -24,7 +24,8 @@ dependencies:
   - R=4.1
   - r-base
   - r-essentials
-#  - pip:
-#      - -e ./extern/parsac
-#      - pyncview
-#      - https://www.parallelpython.com/downloads/pp/pp-1.6.4.4.zip
+  - pip:
+      - -e ./seamless-notebooks/extern/parsac
+      - pyncview
+      - pp
+##      - https://www.parallelpython.com/downloads/pp/pp-1.6.4.4.zip

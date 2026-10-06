@@ -34,70 +34,62 @@ Objetivo: medir la calidad de simulaciones y predicciones.
 ## Estructura del repositorio
 
 ```text
-benchmark-prediccion-oceano/
+OceanQAst/
 ├── README.md                    # Este archivo
-├── requirements.txt
 ├── environment.yml
 ├── data/
-│   ├── raw/                     # Datos crudos (versionados)
-│   └── processed/               # Datos procesados (no versionados, regenerables)
-├── src/
-│   └── xxx/                     
-│       ├── xxx.py
-│       └── xxx.py             
+│   ├── raw/                     # Datos originales
+│   └── processed/               # Datos procesados        
+├── notebooks/
+│   ├── 01_data_preparation.ipynb               
+│   ├── 02_exploratory_analysis.ipynb            
+│   ├── 03_statistical_models.ipynb          
+│   ├── 04_machine_learning.ipynb          
+│   ├── 05_process_based_models.ipynb            
+│   ├── 06_data_model_combination.ipynb             
+│   ├── 07_uncertainty_quantification.ipynb               
+│   └── 08_validation.ipynb
 ├── results/
 │   ├── figures/
 │   └── forecast/
-└── notebooks/
-    ├── 01_data_preparation.ipynb               
-    ├── 02_exploratory_analysis.ipynb            
-    ├── 03_statistical_models.ipynb          
-    ├── 04_machine_learning.ipynb          
-    ├── 05_process_based_models.ipynb            
-    ├── 06_data_model_combination.ipynb             
-    ├── 07_uncertainty_quantification.ipynb               
-    └── 08_validation.ipynb             
-
+├── seamless-notebooks/        # clonado git@github.com:BoldingBruggeman/seamless-notebooks.git
+│   ├── extern/ogs             # clonado git@github.com:inogs/bfmforfabm.git
+│   └── setups/E2GI            # clonado TO DO
+└── src/
+    └── xxx/                     
+        ├── xxx.py
+        └── xxx.py          
 ```
 
 ## Instalación
 
-git clone git@github.com:ealvarez-s/OceanQAst.git
+`git clone git@github.com:ealvarez-s/OceanQAst.git`
+`cd OceanQAst`
+`git clone --recurse-submodules https://github.com/BoldingBruggeman/seamless-notebooks.git`
+`conda env create -f environment.yml`
+`conda activate oceanqast`
 
-cd OceanQAst
+((HOMEDIR=$PWD))
+((MY_DIR=$HOMEDIR/seamless-notebooks))
+((cd $MY_DIR/extern))
 
-conda env create -f environment.yml
-## he comentado la parte instalada con pip, as que no tengo parsac de momento
+`cd seamless-notebooks/extern`
+`git clone --recurse-submodules git@github.com:inogs/bfmforfabm.git ogs`
+`cd ogs`
+`git checkout neccton`
 
-conda activate oceanqast
+((cd $MY_DIR/extern/fabm))
+`cd ../fabm`
+`git checkout necton ??`
 
-## HOMEDIR=$PWD
+((esta parte no va a ser necesaria si solo compilamos pyfabm))
+`cd $MY_DIR/extern/gotm`
+`cd ../gotm`
+`git checkout 5f950ca05e08`
+`git pull --recurse-submodules`
+`git submodule update --init --recursive`
 
-git clone --recurse-submodules https://github.com/BoldingBruggeman/seamless-notebooks.git
+((cd $HOMEDIR))
+`cd ../../../`
 
-##MY_DIR=$HOMEDIR/seamless-notebooks
-##cd $MY_DIR/extern
-
-cd seamless-notebooks/extern
-
-git clone --recurse-submodules git@github.com:inogs/bfmforfabm.git ogs
-cd ogs
-git checkout neccton
-
-
-##cd $MY_DIR/extern/fabm
-cd ../fabm
-git checkout necton ??
-
-### esta parte no va a ser necesaria si solo compilamos pyfabm
-cd $MY_DIR/extern/gotm
-cd ../gotm
-git checkout 5f950ca05e08
-git pull --recurse-submodules
-git submodule update --init --recursive
-####
-
-##cd $HOMEDIR
-cd ../../../
-
-bash ./my_install
+`bash ./my_install`
