@@ -73,30 +73,21 @@ OceanQAst/
 
 `conda activate oceanqast`
 
+`export HOMEDIR=$PWD`
 
-((HOMEDIR=$PWD))
-
-((MY_DIR=$HOMEDIR/seamless-notebooks))
-
-((cd $MY_DIR/extern))
+`export MY_DIR=$HOMEDIR/seamless-notebooks`
 
 
 
-#### Branches
+#### Point to correct branches
 
-`cd seamless-notebooks/extern`
+`cd $MY_DIR/extern/fabm/`
 
-((cd $MY_DIR/extern/fabm))
-
-`cd fabm`
-
-`git checkout necton ??`
+`git checkout master`
 
 ((esta parte no va a ser necesaria si solo compilamos pyfabm))
 
-`cd $MY_DIR/extern/gotm`
-
-`cd ../gotm`
+`cd $MY_DIR/extern/gotm/`
 
 `git checkout 5f950ca05e08`
 
@@ -108,7 +99,7 @@ OceanQAst/
 
 #### BFM
 
-`cd ../`
+`cd $MY_DIR/extern/`
 
 `git clone --recurse-submodules git@github.com:inogs/bfmforfabm.git ogs`
 
@@ -120,7 +111,7 @@ OceanQAst/
 
 #### E2GI setup
 
-`cd ../../setups/`
+`cd $MY_DIR/setups/`
 
 `git clone git@github.com:ealvarez-s/my_E2GI_setup.git` (TO DO)
 
@@ -128,8 +119,6 @@ OceanQAst/
 
 #### Compile pyfabm
 
-((cd $HOMEDIR))
-
-`cd ../../`
+`cd $HOMEDIR`
 
 `bash ./my_install`
