@@ -64,32 +64,54 @@ OceanQAst/
 ## Instalación
 
 `git clone git@github.com:ealvarez-s/OceanQAst.git`
+
 `cd OceanQAst`
+
 `git clone --recurse-submodules https://github.com/BoldingBruggeman/seamless-notebooks.git`
+
 `conda env create -f environment.yml`
+
 `conda activate oceanqast`
 
+
 ((HOMEDIR=$PWD))
+
 ((MY_DIR=$HOMEDIR/seamless-notebooks))
+
 ((cd $MY_DIR/extern))
 
+
 `cd seamless-notebooks/extern`
+
 `git clone --recurse-submodules git@github.com:inogs/bfmforfabm.git ogs`
+
 `cd ogs`
+
 `git checkout neccton`
 
+
 ((cd $MY_DIR/extern/fabm))
+
 `cd ../fabm`
+
 `git checkout necton ??`
 
+
 ((esta parte no va a ser necesaria si solo compilamos pyfabm))
+
 `cd $MY_DIR/extern/gotm`
+
 `cd ../gotm`
+
 `git checkout 5f950ca05e08`
+
 `git pull --recurse-submodules`
+
 `git submodule update --init --recursive`
 
+
 ((cd $HOMEDIR))
+
 `cd ../../../`
 
 `bash ./my_install`
