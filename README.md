@@ -79,13 +79,11 @@ OceanQAst/
 
 
 
-#### Point to correct branches
+#### Point to correct branches in FABM and GOTM
 
 `cd $MY_DIR/extern/fabm/`
 
-`git checkout master`
-
-((esta parte no va a ser necesaria si solo compilamos pyfabm))
+`git checkout master` (neccton was no longer available??)
 
 `cd $MY_DIR/extern/gotm/`
 
@@ -97,7 +95,15 @@ OceanQAst/
 
 
 
-#### BFM
+#### Add spectral ligth module (pml)
+
+`cd $MY_DIR/extern/`
+
+`git clone git@github.com:pmlmodelling/fabm-spectral.git spectral`
+
+
+
+#### Add BFM (ogs)
 
 `cd $MY_DIR/extern/`
 
@@ -105,7 +111,7 @@ OceanQAst/
 
 `cd ogs`
 
-`git checkout neccton`
+`git checkout neccton` (it should work on master)
 
 
 
