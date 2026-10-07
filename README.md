@@ -18,16 +18,16 @@ Objetivo: representar y predecir la dinámica mediante modelos estadísticos.
 Objetivo: aprender relaciones predictivas a partir de los datos.
 
 ### 5. Modelización basada en procesos
-Objetivo: representar explícitamente los mecanismos físicos y biogeoquímicos.
+Objetivo: representar explícitamente los mecanismos (físicos y) biogeoquímicos.
 
-### 6. Integración datos-modelos
+### 6. Controlabilidad del sistema
+Objetivo: evaluar la sensibilidad del modelo a perturbación en parámetros y/o estado.
+
+### 7. Integración datos-modelos
 Objetivo: combinar observaciones y modelos para mejorar la representación y la capacidad predictiva del sistema.
 
-### 7. Cuantificación de incertidumbre
-Objetivo: caracterizar la confianza en las simulaciones y predicciones.
-
 ### 8. Evaluación y validación
-Objetivo: medir la calidad de simulaciones y predicciones.
+Objetivo: medir la calidad de simulaciones y predicciones (horizontes).
 
 
 
@@ -35,11 +35,11 @@ Objetivo: medir la calidad de simulaciones y predicciones.
 
 ```text
 OceanQAst/
-├── README.md                    # Este archivo
-├── environment.yml
+├── README.md                    # este archivo
+├── environment.yml              # requiere conda
 ├── data/
-│   ├── raw/                     # Datos originales
-│   └── processed/               # Datos procesados        
+│   ├── raw/                     # datos originales
+│   └── processed/               # datos procesados        
 ├── notebooks/
 │   ├── 01_data_preparation.ipynb               
 │   ├── 02_exploratory_analysis.ipynb            
@@ -52,16 +52,17 @@ OceanQAst/
 ├── results/
 │   ├── figures/
 │   └── forecast/
-├── seamless-notebooks/        # clonado git@github.com:BoldingBruggeman/seamless-notebooks.git
-│   ├── extern/ogs             # clonado git@github.com:inogs/bfmforfabm.git
-│   └── setups/E2GI            # clonado TO DO
-└── src/
+├── seamless-notebooks/        # hay que clonar git@github.com:BoldingBruggeman/seamless-notebooks.git
+│   ├── extern/ogs             # hay que clonar git@github.com:inogs/bfmforfabm.git
+│   ├── extern/spectral        # hay que clonar git@github.com:pmlmodelling/fabm-spectral.git
+│   └── setups/E2GI            # hay que clonar git@github.com:ealvarez-s/setup_BFM1D_E2GI.git
+└── src/                       # de momento no hay nada, por si se necesita
     └── xxx/                     
         ├── xxx.py
         └── xxx.py          
 ```
 
-### Instalación
+### Configuración
 
 `git clone git@github.com:ealvarez-s/OceanQAst.git`
 
@@ -119,11 +120,11 @@ OceanQAst/
 
 `cd $MY_DIR/setups/`
 
-`git clone git@github.com:ealvarez-s/my_E2GI_setup.git` (TO DO)
+`git clone git@github.com:ealvarez-s/setup_BFM1D_E2GI.git E2GI`
 
 
 
-#### Compile pyfabm
+#### Compile pyfabm and GOTM-FABM (EAT posible)
 
 `cd $HOMEDIR`
 
