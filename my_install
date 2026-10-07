@@ -14,17 +14,17 @@ cp setup.cfg ${REPO_DIR}/seamless-notebooks/extern/fabm/
 pip install ${REPO_DIR}/seamless-notebooks/extern/fabm
 
 ### Build gotm-fabm
-#WORK_DIR=`mktemp -d`
-#cd ${WORK_DIR}
+WORK_DIR=`mktemp -d`
+cd ${WORK_DIR}
 
 ### For building the executable if everything (gotm,fabm,ogs) is fine in the repo dir (dev_1D): 
-#cmake ${REPO_DIR}/seamless-notebooks/extern/gotm -DFABM_BASE=${REPO_DIR}/seamless-notebooks/extern/fabm $FABM_ARGS 
+cmake ${REPO_DIR}/seamless-notebooks/extern/gotm -DFABM_BASE=${REPO_DIR}/seamless-notebooks/extern/fabm $FABM_ARGS 
 
-#make -j4 VERBOSE=1
-#mkdir -p ${REPO_DIR}/seamless-notebooks/bin/
-#cp -v gotm ${REPO_DIR}/seamless-notebooks/bin/
-#cd -
-#rm -rf ${WORK_DIR}
+make -j4 VERBOSE=1
+mkdir -p ${REPO_DIR}/seamless-notebooks/bin/
+cp -v gotm ${REPO_DIR}/seamless-notebooks/bin/
+cd -
+rm -rf ${WORK_DIR}
 
 ### Build eat
 #WORK_DIR=`mktemp -d`
