@@ -122,3 +122,9 @@ OceanQAst/
 `cd $HOMEDIR`
 
 `bash ./my_install`
+
+
+
+#### Open JupyterLab
+
+`jupyter notebook`
