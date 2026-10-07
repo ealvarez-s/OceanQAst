@@ -96,7 +96,7 @@ OceanQAst/
 
 
 
-#### Add spectral ligth module (pml)
+#### Add spectral light module (pml)
 
 `cd $MY_DIR/extern/`
 
