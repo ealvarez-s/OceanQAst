@@ -9,7 +9,7 @@ Los notebooks están organizados siguiendo un flujo de trabajo real que incluye:
 Objetivo: obtener series temporales fiables y utilizables.
 
 ### 2. Análisis exploratorio de series temporales
-Objetivo: comprender la dinámica de los datos.
+Objetivo: comprender la dinámica de los datos. Cálculo de indicadores: MLD, DCM.
 
 ### 3. Modelización estadística
 Objetivo: representar y predecir la dinámica mediante modelos estadísticos.
@@ -18,13 +18,13 @@ Objetivo: representar y predecir la dinámica mediante modelos estadísticos.
 Objetivo: aprender relaciones predictivas a partir de los datos.
 
 ### 5. Modelización basada en procesos
-Objetivo: representar explícitamente los mecanismos (físicos y) biogeoquímicos.
+Objetivo: representar explícitamente los mecanismos (físicos y) biológicos (0D). Resolver las d/dt. 
 
 ### 6. Controlabilidad del sistema
-Objetivo: evaluar la sensibilidad del modelo a perturbación en parámetros y/o estado.
+Objetivo: evaluar la sensibilidad del modelo a perturbación en 1) parámetros (análisis de sensibilidad) y/o 2) estado (análisis de controlabilidad).
 
 ### 7. Integración datos-modelos
-Objetivo: combinar observaciones y modelos para mejorar la representación y la capacidad predictiva del sistema.
+Objetivo: combinar observaciones y modelos para mejorar la representación y la capacidad predictiva del sistema. 1) calibración, métodos de optimización. 2) asimilación de datos.
 
 ### 8. Evaluación y validación
 Objetivo: medir la calidad de simulaciones y predicciones (horizontes).
