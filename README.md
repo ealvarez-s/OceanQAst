@@ -1,24 +1,27 @@
-# Benchmark de predicción en oceanografía
+# Exploración de problemas de predicción en oceanográfia
+### Oportunidades de investigación interdisciplinar con computación cuántica
 
-Se incluye una serie de 20 años de hidrografía (temperatura, salinidad, fluorescencia, oxígeno), nutrientes y clorofila, recogida en la estación E2GI (https://www.seriestemporales-ieo.net/), a la que se le aplican enfoques *estado-del-arte* para hacer predicción en oceanografía (métodos estadísticos, machine learning y modelos mecanicistas) y se evalúen sobre los mismos horizontes de predicción.
+OceanQAst es una plataforma de exploración y formulación de problemas científicos comunes en oceanografía, que puedan traducirse en oportunidades de investigación interdisciplinar con computación cuántica.
 
-Los notebooks están organizados siguiendo un flujo de trabajo real que incluye:
+El repositorio incluye una serie de 20 años de hidrografía (temperatura, salinidad, fluorescencia, oxígeno), nutrientes y clorofila, recogida en la estación E2GI (https://www.seriestemporales-ieo.net/). Los datos se utilizan en una serie de notebooks que permiten explorar, aplicar y comparar métodos de predicción de series temporales oceanográficas, desde enfoques estadísticos hasta modelos basados en procesos, con énfasis en sus fundamentos, requisitos, limitaciones y aplicaciones científicas.
 
+Los notebooks están organizados siguiendo un flujo de trabajo real y cada uno intenta explicar cuál es el método, qué problema resuelve, qué datos necesita y cómo se interpretan sus resultados, mediante ejemplos sencillos y reproducibles. No es una lista exhaustiva, está en una fase inicial cuyo objetivo es identificar problemas interesantes, no presentar soluciones definitivas, sin presuponer dónde aparecerá la oportunidad cuántica.
 
-### 1. Gestión y preparación de datos
-Objetivo: obtener series temporales fiables y utilizables.
+### 1. Preparación de datos
+Objetivo: entender los tipos de datos presentados, obtener series temporales utilizables, rellenar huecos si es necesario, formatear para análisis sucesivos.
 
-### 2. Análisis exploratorio de series temporales
-Objetivo: comprender la dinámica de los datos. Cálculo de indicadores: MLD, DCM.
+### 2. Análisis exploratorio y cálculo de indicadores
+Objetivo: comprender la dinámica de los datos. Cálculo de indicadores: MLD, DCM, fenología.
 
 ### 3. Modelización estadística
 Objetivo: representar y predecir la dinámica mediante modelos estadísticos.
+##### Apartado específico para métodos de evaluación de stocks
 
 ### 4. Aprendizaje automático (Machine Learning)
 Objetivo: aprender relaciones predictivas a partir de los datos.
 
 ### 5. Modelización basada en procesos
-Objetivo: representar explícitamente los mecanismos (físicos y) biológicos (0D). Resolver las d/dt. 
+Objetivo: representar explícitamente los mecanismos (físicos y) biológicos (0D).
 
 ### 6. Controlabilidad del sistema
 Objetivo: evaluar la sensibilidad del modelo a perturbación en 1) parámetros (análisis de sensibilidad) y/o 2) estado (análisis de controlabilidad).
@@ -29,6 +32,8 @@ Objetivo: combinar observaciones y modelos para mejorar la representación y la 
 ### 8. Evaluación y validación
 Objetivo: medir la calidad de simulaciones y predicciones (horizontes).
 
+### 9. Alerta temprana
+Objetivo: determinar cuándo las predicciones se alejan de lo *esperado*.
 
 
 ## Estructura del repositorio
@@ -39,7 +44,7 @@ OceanQAst/
 ├── environment.yml              # requiere conda
 ├── data/
 │   ├── raw/                     # datos originales
-│   └── processed/               # datos procesados        
+│   └── processed/               # datos formateados        
 ├── notebooks/
 │   ├── 01_data_preparation.ipynb               
 │   ├── 02_exploratory_analysis.ipynb            
@@ -48,10 +53,12 @@ OceanQAst/
 │   ├── 05_process_based_models.ipynb            
 │   ├── 06_controlability.ipynb        
 │   ├── 07_data_model_combination.ipynb               
-│   └── 08_validation.ipynb
+│   ├── 08_validation.ipynb
+│   └── 09_early_warning.ipynb
 ├── results/
 │   ├── figures/
-│   └── forecast/
+│   ├── forecast/
+│   └── metrics/
 ├── seamless-notebooks/        # hay que clonar git@github.com:BoldingBruggeman/seamless-notebooks.git
 │   ├── extern/ogs             # hay que clonar git@github.com:inogs/bfmforfabm.git
 │   ├── extern/spectral        # hay que clonar git@github.com:pmlmodelling/fabm-spectral.git
