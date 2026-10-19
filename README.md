@@ -1,5 +1,5 @@
-# Exploración de problemas de predicción en oceanográfia
-### Oportunidades de investigación interdisciplinar con computación cuántica
+# Exploración de problemas de predicción en oceanografia
+#### Oportunidades de investigación interdisciplinar con computación cuántica
 
 OceanQAst es una plataforma de exploración y formulación de problemas científicos comunes en oceanografía, que puedan traducirse en oportunidades de investigación interdisciplinar con computación cuántica.
 
