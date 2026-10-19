@@ -5,7 +5,7 @@ OceanQAst es una plataforma de exploración y formulación de problemas científ
 
 El repositorio incluye una serie de 20 años de hidrografía (temperatura, salinidad, fluorescencia, oxígeno), nutrientes y clorofila, recogida en la estación E2GI (https://www.seriestemporales-ieo.net/). Los datos se utilizan en una serie de notebooks que permiten explorar, aplicar y comparar métodos de predicción de series temporales oceanográficas, desde enfoques estadísticos hasta modelos basados en procesos, con énfasis en sus fundamentos, requisitos, limitaciones y aplicaciones científicas.
 
-Los notebooks están organizados siguiendo un flujo de trabajo real y cada uno intenta explicar cuál es el método, qué problema resuelve, qué datos necesita y cómo se interpretan sus resultados, mediante ejemplos sencillos y reproducibles. No es una lista exhaustiva, está en una fase inicial cuyo objetivo es identificar problemas interesantes, no presentar soluciones definitivas, sin presuponer dónde aparecerá la oportunidad cuántica.
+Los notebooks están organizados siguiendo un flujo de trabajo real y cada uno intenta explicar cuál es el método, qué problema resuelve, qué datos necesita y cómo se interpretan sus resultados, mediante ejemplos sencillos y reproducibles. No es una lista exhaustiva, está en una fase inicial cuyo objetivo es identificar problemas interesantes, no presentar soluciones definitivas, ni presuponer dónde aparecerá la oportunidad cuántica.
 
 ### 1. Preparación de datos
 Objetivo: entender los tipos de datos presentados, obtener series temporales utilizables, rellenar huecos si es necesario, formatear para análisis sucesivos.
