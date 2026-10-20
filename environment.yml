@@ -2,14 +2,14 @@ name: oceanqast
 channels:
   - conda-forge
 dependencies:
-  - python=3.8.18
-  - pip=24.0
+  - python=3.10
+  - pip
   - fortran-compiler
   - netcdf-fortran
   - jupyterlab
   - cmake=3.25.1
   - numpy
-  - matplotlib=3.4.*
+  - matplotlib
   - scipy
   - ipympl
   - netcdf4
@@ -21,7 +21,6 @@ dependencies:
   - mpi4py  # for EAT
   - cython  # for EAT
   - pyqt    # for PyNcView
-  - R=4.1
   - r-base
   - r-essentials
   - pip:
