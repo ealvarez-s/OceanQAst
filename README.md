@@ -81,19 +81,19 @@ OceanQAst/
 
 `conda activate oceanqast`
 
-`export HOMEDIR=$PWD`
+`export HOMEDIR=$PWD` ($env:HOMEDIR = $PWD.Path en PowerShell)
 
-`export MY_DIR=$HOMEDIR/seamless-notebooks`
+`export MY_DIR=$HOMEDIR/seamless-notebooks` ($env:MY_DIR = "$env:HOMEDIR\seamless-notebooks" en PowerShell)
 
 
 
 #### Point to correct branches in FABM and GOTM
 
-`cd $MY_DIR/extern/fabm/`
+`cd $MY_DIR/extern/fabm/` (cd $env:MY_DIR/extern/fabm/ en PowerShell)
 
-`git checkout master` (neccton was no longer available??)
+`git checkout master` (necesita master, neccton is no longer available y detached no funciona)
 
-`cd $MY_DIR/extern/gotm/`
+`cd $MY_DIR/extern/gotm/` (cd $env:MY_DIR/extern/gotm/ en PowerShell)
 
 `git checkout 5f950ca05e08`
 
@@ -105,7 +105,7 @@ OceanQAst/
 
 #### Add spectral light module (pml)
 
-`cd $MY_DIR/extern/`
+`cd $MY_DIR/extern/` (cd $env:MY_DIR/extern/ en PowerShell)
 
 `git clone git@github.com:pmlmodelling/fabm-spectral.git spectral`
 
@@ -125,7 +125,7 @@ OceanQAst/
 
 #### E2GI setup
 
-`cd $MY_DIR/setups/`
+`cd $MY_DIR/setups/` (cd $env:MY_DIR/setups/ en PowerShell)
 
 `git clone git@github.com:ealvarez-s/setup_BFM1D_E2GI.git E2GI`
 
@@ -133,7 +133,7 @@ OceanQAst/
 
 #### Compile pyfabm and GOTM-FABM (EAT posible)
 
-`cd $HOMEDIR`
+`cd $HOMEDIR` (cd $env:HOMEDIR en PowerShell)
 
 `bash ./my_install`
 
