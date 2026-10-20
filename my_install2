@@ -1,0 +1,35 @@
+# This script is intended to be source'd, not executed
+
+#set -e
+
+REPO_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+#export FFLAGS='-fcheck=all -O0 -Wall -Wextra -g -cpp -DDEBUG -DQUICK'
+
+# Add additional FABM "institutes" (bfm, ecosmo, etc.) and their base directory on the line below.
+FABM_ARGS="-DFABM_INSTITUTES=gotm;msi;ersem;pisces;ogs;spectral -DFABM_ERSEM_BASE=${REPO_DIR}/seamless-notebooks/extern/ersem -DFABM_PISCES_BASE=${REPO_DIR}/seamless-notebooks/extern/pisces -DFABM_OGS_BASE\
+=${REPO_DIR}/seamless-notebooks/extern/ogs -DFABM_SPECTRAL_BASE=${REPO_DIR}/seamless-notebooks/extern/spectral -DCMAKE_Fortran_COMPILER=gfortran  -DCMAKE_BUILD_TYPE=release"
+
+FABM_DIR="${REPO_DIR}/seamless-notebooks/extern/fabm"
+OGS_DIR="${REPO_DIR}/seamless-notebooks/extern/ogs"
+##LIGHT_DIR="${REPO_DIR}/seamless-notebooks/extern/spectral"
+
+# Convertir a ruta absoluta y normalizar para CMake
+OGS_DIR="$(cd "${OGS_DIR}" && pwd -P)"
+##LIGHT_DIR="$(cd "${LIGHT_DIR}" && pwd -P)"
+
+if [[ "${OSTYPE}" == msys* || "${OSTYPE}" == cygwin* ]]; then
+    OGS_DIR="$(cygpath -m "${OGS_DIR}")"
+fi
+
+cat > "${FABM_DIR}/setup.cfg" <<EOF
+[build_ext]
+cmake_opts=-DFABM_EXTRA_INSTITUTES=ogs -DFABM_OGS_BASE=${OGS_DIR}
+EOF
+
+pip install "${FABM_DIR}"
+
+
+### Build pyfabm
+cp setup.cfg ${REPO_DIR}/seamless-notebooks/extern/fabm/
+pip install ${REPO_DIR}/seamless-notebooks/extern/fabm
