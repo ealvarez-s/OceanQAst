@@ -31,9 +31,7 @@ Objetivo: combinar observaciones y modelos para mejorar la representación y la 
 
 ### 8. Evaluación y validación
 Objetivo: medir la calidad de simulaciones y predicciones (horizontes).
-
-### 9. Alerta temprana
-Objetivo: determinar cuándo las predicciones se alejan de lo *esperado*.
+##### Apartado específico para detección de señales de alerta temprana
 
 
 ## Estructura del repositorio
@@ -53,8 +51,7 @@ OceanQAst/
 │   ├── 05_process_based_models.ipynb            
 │   ├── 06_controlability.ipynb        
 │   ├── 07_data_model_combination.ipynb               
-│   ├── 08_validation.ipynb
-│   └── 09_early_warning.ipynb
+│   └── 08_validation.ipynb
 ├── results/
 │   ├── figures/
 │   ├── forecast/
